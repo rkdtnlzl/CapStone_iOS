@@ -16,7 +16,7 @@
 		013779382AAEE2A30055733F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013779372AAEE2A30055733F /* MainViewController.swift */; };
 		0137793E2AAEE7B40055733F /* InsetTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0137793D2AAEE7B40055733F /* InsetTextField.swift */; };
 		013779402AAEE7E40055733F /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0137793F2AAEE7E40055733F /* UIColor+Extension.swift */; };
-		013779422AAEE7FA0055733F /* UITextField+Extenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013779412AAEE7FA0055733F /* UITextField+Extenstion.swift */; };
+		013779422AAEE7FA0055733F /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013779412AAEE7FA0055733F /* UITextField+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +30,7 @@
 		013779372AAEE2A30055733F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0137793D2AAEE7B40055733F /* InsetTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetTextField.swift; sourceTree = "<group>"; };
 		0137793F2AAEE7E40055733F /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
-		013779412AAEE7FA0055733F /* UITextField+Extenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extenstion.swift"; sourceTree = "<group>"; };
+		013779412AAEE7FA0055733F /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +81,7 @@
 			children = (
 				0137793D2AAEE7B40055733F /* InsetTextField.swift */,
 				0137793F2AAEE7E40055733F /* UIColor+Extension.swift */,
-				013779412AAEE7FA0055733F /* UITextField+Extenstion.swift */,
+				013779412AAEE7FA0055733F /* UITextField+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -162,7 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				013779422AAEE7FA0055733F /* UITextField+Extenstion.swift in Sources */,
+				013779422AAEE7FA0055733F /* UITextField+Extension.swift in Sources */,
 				013779382AAEE2A30055733F /* MainViewController.swift in Sources */,
 				0137793E2AAEE7B40055733F /* InsetTextField.swift in Sources */,
 				0137791D2AAEE11E0055733F /* ViewController.swift in Sources */,

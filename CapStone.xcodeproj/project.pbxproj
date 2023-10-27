@@ -17,6 +17,7 @@
 		0137793E2AAEE7B40055733F /* InsetTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0137793D2AAEE7B40055733F /* InsetTextField.swift */; };
 		013779402AAEE7E40055733F /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0137793F2AAEE7E40055733F /* UIColor+Extension.swift */; };
 		013779422AAEE7FA0055733F /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013779412AAEE7FA0055733F /* UITextField+Extension.swift */; };
+		01F944F02AEB9E7100FE9AB1 /* SurveySexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F944EF2AEB9E7100FE9AB1 /* SurveySexViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		0137793D2AAEE7B40055733F /* InsetTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetTextField.swift; sourceTree = "<group>"; };
 		0137793F2AAEE7E40055733F /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		013779412AAEE7FA0055733F /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		01F944EF2AEB9E7100FE9AB1 /* SurveySexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveySexViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				0137791A2AAEE11E0055733F /* SceneDelegate.swift */,
 				0137791C2AAEE11E0055733F /* ViewController.swift */,
 				013779372AAEE2A30055733F /* MainViewController.swift */,
+				01F944EF2AEB9E7100FE9AB1 /* SurveySexViewController.swift */,
 				013779392AAEE4E00055733F /* Extension */,
 				013779212AAEE11F0055733F /* Assets.xcassets */,
 				013779232AAEE11F0055733F /* LaunchScreen.storyboard */,
@@ -167,6 +170,7 @@
 				0137793E2AAEE7B40055733F /* InsetTextField.swift in Sources */,
 				0137791D2AAEE11E0055733F /* ViewController.swift in Sources */,
 				013779402AAEE7E40055733F /* UIColor+Extension.swift in Sources */,
+				01F944F02AEB9E7100FE9AB1 /* SurveySexViewController.swift in Sources */,
 				013779192AAEE11E0055733F /* AppDelegate.swift in Sources */,
 				0137791B2AAEE11E0055733F /* SceneDelegate.swift in Sources */,
 			);

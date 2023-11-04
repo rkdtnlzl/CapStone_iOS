@@ -19,24 +19,24 @@ class SurveySexViewController: UIViewController {
         return progressView
     }()
     
-    private let mainLabel: UILabel = {
+    private let mainAgeLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
         label.textColor = .black
         label.textAlignment = .left
-        label.text = "성별,생년월일을 선택해주세요"
+        label.text = "성별을 선택해주세요"
         label.numberOfLines = 1
         return label
     }()
     
-    private let descriptionLabel: UILabel = {
+    private let descriptionAgeLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 13, weight: .regular)
         label.textColor = UIColor(r: 113, g: 114, b: 122)
         label.textAlignment = .left
-        label.text = "성별과 나이에 경우,모델학습에 도움이 됩니다."
+        label.text = "성별에 경우,모델학습에 도움이 됩니다."
         label.numberOfLines = 1
         return label
     }()
@@ -95,6 +95,28 @@ class SurveySexViewController: UIViewController {
         return imageView
     }()
     
+    private let mainYearLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        label.textColor = .black
+        label.textAlignment = .left
+        label.text = "생년월일을 선택해주세요"
+        label.numberOfLines = 1
+        return label
+    }()
+    
+    private let descriptionYearLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.systemFont(ofSize: 13, weight: .regular)
+        label.textColor = UIColor(r: 113, g: 114, b: 122)
+        label.textAlignment = .left
+        label.text = "생년월일에 경우,모델학습에 도움이 됩니다."
+        label.numberOfLines = 1
+        return label
+    }()
+    
     private let nextButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -107,6 +129,15 @@ class SurveySexViewController: UIViewController {
         return button
     }()
     
+    private let datePicker: UIDatePicker = {
+        let datePicker = UIDatePicker()
+        datePicker.translatesAutoresizingMaskIntoConstraints = false
+        datePicker.datePickerMode = .date
+        datePicker.locale = Locale(identifier: "ko_KR") // 원하는 로케일로 설정
+        datePicker.maximumDate = Date() // 미래 날짜 선택 방지
+        return datePicker
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -115,13 +146,16 @@ class SurveySexViewController: UIViewController {
         self.navigationItem.hidesBackButton = true
         
         self.view.addSubview(progressBar)
-        self.view.addSubview(mainLabel)
-        self.view.addSubview(descriptionLabel)
+        self.view.addSubview(mainAgeLabel)
+        self.view.addSubview(descriptionAgeLabel)
         self.view.addSubview(manButton)
         self.view.addSubview(check_man)
         self.view.addSubview(womanButton)
         self.view.addSubview(check_woman)
         self.view.addSubview(nextButton)
+        self.view.addSubview(datePicker)
+        self.view.addSubview(mainYearLabel)
+        self.view.addSubview(descriptionYearLabel)
         
         
         progressBar.snp.makeConstraints { make in
@@ -131,18 +165,18 @@ class SurveySexViewController: UIViewController {
             make.height.equalTo(10) // 프로그레스바 높이 설정
         }
         
-        mainLabel.snp.makeConstraints { make in
+        mainAgeLabel.snp.makeConstraints { make in
             make.leading.equalTo(self.view.safeAreaLayoutGuide.snp.leading).inset(34)
             make.top.equalTo(self.progressBar.snp.bottom).offset(40)
         }
-        descriptionLabel.snp.makeConstraints { make in
+        descriptionAgeLabel.snp.makeConstraints { make in
             make.leading.equalTo(self.view.safeAreaLayoutGuide.snp.leading).inset(34)
-            make.top.equalTo(self.mainLabel.snp.bottom).offset(10)
+            make.top.equalTo(self.mainAgeLabel.snp.bottom).offset(10)
         }
         manButton.snp.makeConstraints { make in
             make.leading.equalTo(self.view.safeAreaLayoutGuide.snp.leading).inset(34)
             make.trailing.equalTo(self.view.safeAreaLayoutGuide.snp.trailing).inset(34)
-            make.top.equalTo(self.descriptionLabel.snp.bottom).offset(63)
+            make.top.equalTo(self.descriptionAgeLabel.snp.bottom).offset(33)
             make.height.equalTo(50)
         }
         check_man.snp.makeConstraints { make in
@@ -163,6 +197,18 @@ class SurveySexViewController: UIViewController {
             make.height.equalTo(15)
             make.width.equalTo(15)
         }
+        mainYearLabel.snp.makeConstraints { make in
+            make.leading.equalTo(self.view.safeAreaLayoutGuide.snp.leading).inset(34)
+            make.top.equalTo(self.womanButton.snp.bottom).offset(60)
+        }
+        descriptionYearLabel.snp.makeConstraints { make in
+            make.leading.equalTo(self.view.safeAreaLayoutGuide.snp.leading).inset(34)
+            make.top.equalTo(self.mainYearLabel.snp.bottom).offset(10)
+        }
+        datePicker.snp.makeConstraints { make in
+            make.leading.equalTo(self.view.safeAreaLayoutGuide.snp.leading).inset(34)
+            make.top.equalTo(self.descriptionYearLabel.snp.bottom).offset(30)
+        }
         self.nextButton.snp.makeConstraints { make in
             make.leading.equalTo(self.view.safeAreaLayoutGuide.snp.leading).inset(24)
             make.trailing.equalTo(self.view.safeAreaLayoutGuide.snp.trailing).inset(24)
@@ -173,6 +219,9 @@ class SurveySexViewController: UIViewController {
         manButton.addTarget(self, action: #selector(manButtonTapped), for: .touchUpInside)
         womanButton.addTarget(self, action: #selector(womanButtonTapped), for: .touchUpInside)
         self.nextButton.addTarget(self, action: #selector(onPressNextButton), for: .touchUpInside)
+        
+        // 날짜 선택 시 동작을 추가
+        datePicker.addTarget(self, action: #selector(datePickerValueChanged), for: .valueChanged)
     }
     
     // manButton을 클릭했을 때 호출될 메서드
@@ -199,7 +248,16 @@ class SurveySexViewController: UIViewController {
     }
 
     @objc func onPressNextButton(sender: UIButton) {
-        let surveyView_2 = SurveyAgeViewController()
+        let surveyView_2 = SurveySkinViewController()
         self.navigationController?.pushViewController(surveyView_2, animated: true)
+    }
+    
+    // DatePicker 값이 변경될 때 호출될 메서드
+    @objc private func datePickerValueChanged() {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd" // 적절한 형식으로 설정
+        let selectedDate = dateFormatter.string(from: datePicker.date)
+        print("Selected Date: \(selectedDate)")
+        progressBar.setProgress(0.25, animated: true)
     }
 }

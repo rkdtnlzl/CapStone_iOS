@@ -25,7 +25,7 @@ class SurveySexViewController: UIViewController {
         label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
         label.textColor = .black
         label.textAlignment = .left
-        label.text = "성별을 선택해주세요"
+        label.text = "성별,생년월일을 선택해주세요"
         label.numberOfLines = 1
         return label
     }()
@@ -36,7 +36,7 @@ class SurveySexViewController: UIViewController {
         label.font = UIFont.systemFont(ofSize: 13, weight: .regular)
         label.textColor = UIColor(r: 113, g: 114, b: 122)
         label.textAlignment = .left
-        label.text = "성별에 경우, 모델의 성별을 학습할때 도움이 됩니다."
+        label.text = "성별과 나이에 경우,모델학습에 도움이 됩니다."
         label.numberOfLines = 1
         return label
     }()
@@ -172,8 +172,7 @@ class SurveySexViewController: UIViewController {
         
         manButton.addTarget(self, action: #selector(manButtonTapped), for: .touchUpInside)
         womanButton.addTarget(self, action: #selector(womanButtonTapped), for: .touchUpInside)
-        // 로그인하기 버튼 클릭시 다음화면으로 이동
-//        self.nextButton.addTarget(self, action: #selector(onPressNextButton), for: .touchUpInside)
+        self.nextButton.addTarget(self, action: #selector(onPressNextButton), for: .touchUpInside)
     }
     
     // manButton을 클릭했을 때 호출될 메서드
@@ -199,11 +198,8 @@ class SurveySexViewController: UIViewController {
         progressBar.setProgress(0.25, animated: true)
     }
 
-//    @objc func onPressNextButton(sender: UIButton) {
-//        let surveyView_2 = SurveyTopColorViewController()
-//        UserDefaults.standard.set(self.sex, forKey: "sex")
-//        let sex:String = UserDefaults.standard.object(forKey: "sex") as! String
-//        print(sex)
-//        self.navigationController?.pushViewController(surveyView_2, animated: true)
-//    }
+    @objc func onPressNextButton(sender: UIButton) {
+        let surveyView_2 = SurveyAgeViewController()
+        self.navigationController?.pushViewController(surveyView_2, animated: true)
+    }
 }

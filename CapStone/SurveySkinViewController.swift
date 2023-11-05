@@ -111,6 +111,8 @@ class SurveySkinViewController: UIViewController,UIImagePickerControllerDelegate
         // 카메라 버튼에 액션을 추가합니다.
         cameraButton.addTarget(self, action: #selector(openCamera), for: .touchUpInside)
         
+        nextButton.addTarget(self, action: #selector(onPressNextButton), for: .touchUpInside)
+        
     }
     
     @objc func openCamera() {
@@ -129,6 +131,7 @@ class SurveySkinViewController: UIViewController,UIImagePickerControllerDelegate
         if let selectedImage = info[.originalImage] as? UIImage {
             // 선택한 이미지를 처리하는 코드를 여기에 추가합니다.
             // 예를 들어, 이미지를 저장하거나 표시할 수 있습니다.
+            progressBar.setProgress(0.66, animated: true)
         }
         
         // 카메라 뷰를 닫습니다.
@@ -142,17 +145,17 @@ class SurveySkinViewController: UIViewController,UIImagePickerControllerDelegate
     
     
     func checkCameraPermission(){
-       AVCaptureDevice.requestAccess(for: .video, completionHandler: { (granted: Bool) in
-           if granted {
-               print("Camera: 권한 허용")
-           } else {
-               print("Camera: 권한 거부")
-           }
-       })
+        AVCaptureDevice.requestAccess(for: .video, completionHandler: { (granted: Bool) in
+            if granted {
+                print("Camera: 권한 허용")
+            } else {
+                print("Camera: 권한 거부")
+            }
+        })
     }
     
-    //    @objc func onPressNextButton(sender: UIButton) {
-    //        let surveyView_2 = SurveyAgeViewController()
-    //        self.navigationController?.pushViewController(surveyView_2, animated: true)
-    //    }
+    @objc func onPressNextButton(sender: UIButton) {
+        let learningView = LearningViewController()
+        self.navigationController?.pushViewController(learningView, animated: true)
+    }
 }

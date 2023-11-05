@@ -244,7 +244,7 @@ class SurveySexViewController: UIViewController {
         check_man.isHidden = true
         check_woman.isHidden = false
         sex = "여자"
-        progressBar.setProgress(0.25, animated: true)
+        progressBar.setProgress(0.33, animated: true)
     }
 
     @objc func onPressNextButton(sender: UIButton) {
@@ -258,6 +258,6 @@ class SurveySexViewController: UIViewController {
         dateFormatter.dateFormat = "yyyy-MM-dd" // 적절한 형식으로 설정
         let selectedDate = dateFormatter.string(from: datePicker.date)
         print("Selected Date: \(selectedDate)")
-        progressBar.setProgress(0.25, animated: true)
+        progressBar.setProgress(0.33, animated: true)
     }
 }

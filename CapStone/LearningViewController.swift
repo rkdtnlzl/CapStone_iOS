@@ -75,6 +75,11 @@ class LearningViewController: UIViewController {
         // 현재 뷰 컨트롤러의 뒤로가기 버튼을 숨깁니다.
         self.navigationItem.hidesBackButton = true
         
+        // 홈 버튼을 생성하고 액션을 추가
+        let homeImage = UIImage(systemName: "house.fill") // 시스템 이미지 이름을 변경해야 할 수 있음
+        let homeButton = UIBarButtonItem(image: homeImage, style: .plain, target: self, action: #selector(goToHome))
+        self.navigationItem.rightBarButtonItem = homeButton
+        
         // 10초 후에 애니메이션 중지하고 이미지 뷰 추가
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) { [weak self] in
             self?.activityIndicator.stopAnimating()
@@ -150,4 +155,11 @@ class LearningViewController: UIViewController {
 //        let resultView = SegmentViewController()
 //        self.navigationController?.pushViewController(resultView, animated: true)
 //    }
+    
+    @objc func goToHome() {
+        // 홈 버튼을 눌렀을 때 실행할 코드를 작성
+        // 예를 들어, 다른 뷰 컨트롤러로 이동하는 코드를 여기에 추가
+         let homeViewController = MainViewController()
+         self.navigationController?.pushViewController(homeViewController, animated: true)
+    }
 }

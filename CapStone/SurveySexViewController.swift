@@ -238,7 +238,7 @@ class SurveySexViewController: UIViewController {
         check_man.isHidden = false
         check_woman.isHidden = true
         sex = "남자"
-        progressBar.setProgress(0.25, animated: true)
+        progressBar.setProgress(0.33, animated: true)
     }
     // manButton을 클릭했을 때 호출될 메서드
     @objc private func womanButtonTapped() {

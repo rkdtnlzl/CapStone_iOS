@@ -10,15 +10,26 @@ import UIKit
 
 class ResultViewController: UIViewController {
     
-    let profileView = CustomView()
+    let firstDoubtView = CustomView()
     
-    private let loadingLabel: UILabel = {
+    private let firstDoubtLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
+        label.font = UIFont.systemFont(ofSize: 17, weight: .bold)
         label.textColor = .black
         label.textAlignment = .left
-        label.text = "추천 중"
+        label.text = "1순위 의심 질환"
+        label.numberOfLines = 1
+        return label
+    }()
+    
+    private let hospitalLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.systemFont(ofSize: 17, weight: .bold)
+        label.textColor = .black
+        label.textAlignment = .left
+        label.text = "의심 질환 병원 TOP3"
         label.numberOfLines = 1
         return label
     }()
@@ -37,17 +48,29 @@ class ResultViewController: UIViewController {
         
         
         
-        profileView.imageView.image = UIImage(named: "acne")
-        profileView.nameLabel.text = "여드름"
-        profileView.descriptionLabel.text = "남녀의 얼굴·가슴 등에 도톨도톨하게 나는 작은 종기"
+        firstDoubtView.imageView.image = UIImage(named: "acne")
+        firstDoubtView.nameLabel.text = "여드름"
+        firstDoubtView.descriptionLabel.text = "남녀의 얼굴·가슴 등에 도톨도톨하게 나는 작은 종기"
         
-        self.view.addSubview(profileView)
+        self.view.addSubview(firstDoubtLabel)
+        self.view.addSubview(firstDoubtView)
+        self.view.addSubview(hospitalLabel)
         
-        profileView.snp.makeConstraints { make in
+        firstDoubtLabel.snp.makeConstraints { make in
+            make.leading.equalTo(self.view.safeAreaLayoutGuide.snp.leading).inset(36)
+            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).inset(20)
+        }
+        
+        firstDoubtView.snp.makeConstraints { make in
             make.leading.equalTo(self.view.safeAreaLayoutGuide.snp.leading).inset(34)
             make.trailing.equalTo(self.view.safeAreaLayoutGuide.snp.trailing).inset(34)
-            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).inset(80)
-            make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).inset(380)
+            make.top.equalTo(self.firstDoubtLabel.snp.bottom).offset(12)
+            make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).inset(320)
+        }
+        
+        hospitalLabel.snp.makeConstraints { make in
+            make.leading.equalTo(self.view.safeAreaLayoutGuide.snp.leading).inset(36)
+            make.top.equalTo(self.firstDoubtView.snp.bottom).offset(30)
         }
     }
     
@@ -135,7 +158,7 @@ class CustomView: UIView{
             make.leading.equalTo(snp.leading).inset(0)
             make.trailing.equalTo(snp.trailing).inset(0)
             make.top.equalTo(snp.top).inset(0)
-            make.height.equalTo(120)
+            make.height.equalTo(210)
         }
         nameLabel.snp.makeConstraints { make in
             make.leading.equalTo(snp.leading).inset(15)

@@ -12,6 +12,8 @@ class ResultViewController: UIViewController {
     
     let firstDoubtView = CustomView()
     
+    let hospitalView = HospitalCustomView()
+    
     private let firstDoubtLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -52,9 +54,14 @@ class ResultViewController: UIViewController {
         firstDoubtView.nameLabel.text = "여드름"
         firstDoubtView.descriptionLabel.text = "남녀의 얼굴·가슴 등에 도톨도톨하게 나는 작은 종기"
         
+        hospitalView.imageView.image = UIImage(named: "acne")
+        hospitalView.nameLabel.text = "국군수도병원"
+        hospitalView.descriptionLabel.text = "우리나라 병원 GOAT"
+        
         self.view.addSubview(firstDoubtLabel)
         self.view.addSubview(firstDoubtView)
         self.view.addSubview(hospitalLabel)
+        self.view.addSubview(hospitalView)
         
         firstDoubtLabel.snp.makeConstraints { make in
             make.leading.equalTo(self.view.safeAreaLayoutGuide.snp.leading).inset(36)
@@ -71,6 +78,13 @@ class ResultViewController: UIViewController {
         hospitalLabel.snp.makeConstraints { make in
             make.leading.equalTo(self.view.safeAreaLayoutGuide.snp.leading).inset(36)
             make.top.equalTo(self.firstDoubtView.snp.bottom).offset(30)
+        }
+        
+        hospitalView.snp.makeConstraints { make in
+            make.leading.equalTo(self.view.safeAreaLayoutGuide.snp.leading).inset(34)
+            make.trailing.equalTo(self.view.safeAreaLayoutGuide.snp.trailing).inset(34)
+            make.top.equalTo(self.hospitalLabel.snp.bottom).offset(12)
+            make.height.equalTo(80)
         }
     }
     
@@ -176,3 +190,103 @@ class CustomView: UIView{
         }
     }
 }
+
+class HospitalCustomView: UIView{
+    
+    let imageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.image = UIImage(named: "acne")
+        imageView.contentMode = .scaleToFill
+        return imageView
+    }()
+    
+    let nameLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
+        label.textColor = .black
+        label.textAlignment = .left
+        label.numberOfLines = 1
+        return label
+    }()
+    let descriptionLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.systemFont(ofSize: 11, weight: .regular)
+        label.textColor = .black
+        label.textAlignment = .left
+        label.numberOfLines = 1
+        return label
+    }()
+    let moreButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        
+        // 배경색을 투명하게 설정
+        button.backgroundColor = .clear
+        button.clipsToBounds = true
+        
+        // rightArrow 이미지 설정
+        if let rightArrowImage = UIImage(systemName: "arrow.right") {
+            let rightArrowImageView = UIImageView(image: rightArrowImage)
+            // 이미지 뷰를 버튼에 추가
+            button.addSubview(rightArrowImageView)
+            
+            // 이미지 뷰의 제약 조건 설정 (예: 가운데 정렬)
+            rightArrowImageView.translatesAutoresizingMaskIntoConstraints = false
+            rightArrowImageView.centerXAnchor.constraint(equalTo: button.centerXAnchor).isActive = true
+            rightArrowImageView.centerYAnchor.constraint(equalTo: button.centerYAnchor).isActive = true
+        }
+        
+        return button
+    }()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        //code
+        ab()
+        setupLayout()
+        
+        layer.cornerRadius = 15
+        layer.masksToBounds = true
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func ab(){
+        print("Init")
+    }
+    func setupLayout() {
+        backgroundColor = UIColor(r: 248, g: 248, b: 254)
+        addSubview(imageView)
+        addSubview(nameLabel)
+        addSubview(descriptionLabel)
+        addSubview(moreButton)
+        imageView.snp.makeConstraints { make in
+            make.leading.equalTo(snp.leading).inset(0)
+            make.trailing.equalTo(snp.trailing).inset(230)
+            make.top.equalTo(snp.top).inset(0)
+            make.bottom.equalTo(snp.bottom).inset(0)
+            
+        }
+        nameLabel.snp.makeConstraints { make in
+            make.leading.equalTo(imageView.snp.trailing).offset(15)
+            make.top.equalTo(snp.top).inset(20)
+        }
+        descriptionLabel.snp.makeConstraints { make in
+            make.leading.equalTo(imageView.snp.trailing).offset(15)
+            make.top.equalTo(nameLabel.snp.bottom).offset(5)
+        }
+        moreButton.snp.makeConstraints { make in
+            make.trailing.equalTo(snp.trailing).inset(30)
+            make.centerY.equalTo(snp.centerY)
+            make.height.equalTo(20)
+            make.width.equalTo(20)
+        }
+    }
+}
+

@@ -147,14 +147,14 @@ class LearningViewController: UIViewController {
             make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).inset(24)
             make.height.equalTo(48)
         }
-//
-//        self.nextButton.addTarget(self, action: #selector(onPressNextButton), for: .touchUpInside)
+
+        self.nextButton.addTarget(self, action: #selector(onPressNextButton), for: .touchUpInside)
     }
     
-//    @objc func onPressNextButton(sender: UIButton) {
-//        let resultView = SegmentViewController()
-//        self.navigationController?.pushViewController(resultView, animated: true)
-//    }
+    @objc func onPressNextButton(sender: UIButton) {
+        let resultView = ResultViewController()
+        self.navigationController?.pushViewController(resultView, animated: true)
+    }
     
     @objc func goToHome() {
         // 홈 버튼을 눌렀을 때 실행할 코드를 작성

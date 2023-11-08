@@ -12,7 +12,9 @@ class ResultViewController: UIViewController {
     
     let firstDoubtView = CustomView()
     
-    let hospitalView = HospitalCustomView()
+    let hospitalView_1 = HospitalCustomView()
+    let hospitalView_2 = HospitalCustomView()
+    
     
     private let firstDoubtLabel: UILabel = {
         let label = UILabel()
@@ -31,7 +33,7 @@ class ResultViewController: UIViewController {
         label.font = UIFont.systemFont(ofSize: 17, weight: .bold)
         label.textColor = .black
         label.textAlignment = .left
-        label.text = "의심 질환 병원 TOP3"
+        label.text = "의심 질환 병원 TOP2"
         label.numberOfLines = 1
         return label
     }()
@@ -54,14 +56,19 @@ class ResultViewController: UIViewController {
         firstDoubtView.nameLabel.text = "여드름"
         firstDoubtView.descriptionLabel.text = "남녀의 얼굴·가슴 등에 도톨도톨하게 나는 작은 종기"
         
-        hospitalView.imageView.image = UIImage(named: "acne")
-        hospitalView.nameLabel.text = "국군수도병원"
-        hospitalView.descriptionLabel.text = "우리나라 병원 GOAT"
+        hospitalView_1.imageView.image = UIImage(named: "hospital_test1")
+        hospitalView_1.nameLabel.text = "국군수도병원"
+        hospitalView_1.descriptionLabel.text = "우리나라 병원 GOAT"
+        
+        hospitalView_2.imageView.image = UIImage(named: "hospital_test2")
+        hospitalView_2.nameLabel.text = "포천수도병원"
+        hospitalView_2.descriptionLabel.text = "우리나라 병원 넘버원"
         
         self.view.addSubview(firstDoubtLabel)
         self.view.addSubview(firstDoubtView)
         self.view.addSubview(hospitalLabel)
-        self.view.addSubview(hospitalView)
+        self.view.addSubview(hospitalView_1)
+        self.view.addSubview(hospitalView_2)
         
         firstDoubtLabel.snp.makeConstraints { make in
             make.leading.equalTo(self.view.safeAreaLayoutGuide.snp.leading).inset(36)
@@ -80,10 +87,17 @@ class ResultViewController: UIViewController {
             make.top.equalTo(self.firstDoubtView.snp.bottom).offset(30)
         }
         
-        hospitalView.snp.makeConstraints { make in
+        hospitalView_1.snp.makeConstraints { make in
             make.leading.equalTo(self.view.safeAreaLayoutGuide.snp.leading).inset(34)
             make.trailing.equalTo(self.view.safeAreaLayoutGuide.snp.trailing).inset(34)
             make.top.equalTo(self.hospitalLabel.snp.bottom).offset(12)
+            make.height.equalTo(80)
+        }
+        
+        hospitalView_2.snp.makeConstraints { make in
+            make.leading.equalTo(self.view.safeAreaLayoutGuide.snp.leading).inset(34)
+            make.trailing.equalTo(self.view.safeAreaLayoutGuide.snp.trailing).inset(34)
+            make.top.equalTo(self.hospitalView_1.snp.bottom).offset(12)
             make.height.equalTo(80)
         }
     }

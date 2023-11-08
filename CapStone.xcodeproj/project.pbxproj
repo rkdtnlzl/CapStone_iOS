@@ -11,7 +11,7 @@
 		013747DC2AF8B629002C3DE4 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013747DB2AF8B629002C3DE4 /* ResultViewController.swift */; };
 		013779192AAEE11E0055733F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013779182AAEE11E0055733F /* AppDelegate.swift */; };
 		0137791B2AAEE11E0055733F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0137791A2AAEE11E0055733F /* SceneDelegate.swift */; };
-		0137791D2AAEE11E0055733F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0137791C2AAEE11E0055733F /* ViewController.swift */; };
+		0137791D2AAEE11E0055733F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0137791C2AAEE11E0055733F /* LoginViewController.swift */; };
 		013779222AAEE11F0055733F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 013779212AAEE11F0055733F /* Assets.xcassets */; };
 		013779252AAEE11F0055733F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 013779232AAEE11F0055733F /* LaunchScreen.storyboard */; };
 		0137792E2AAEE2290055733F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0137792D2AAEE2290055733F /* SnapKit */; };
@@ -29,7 +29,7 @@
 		013779152AAEE11E0055733F /* CapStone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CapStone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		013779182AAEE11E0055733F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0137791A2AAEE11E0055733F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0137791C2AAEE11E0055733F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0137791C2AAEE11E0055733F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		013779212AAEE11F0055733F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		013779242AAEE11F0055733F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		013779262AAEE11F0055733F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,6 +53,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		013747DD2AFB780B002C3DE4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				013779212AAEE11F0055733F /* Assets.xcassets */,
+				013779182AAEE11E0055733F /* AppDelegate.swift */,
+				0137791A2AAEE11E0055733F /* SceneDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		013747DE2AFB7875002C3DE4 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				0137791C2AAEE11E0055733F /* LoginViewController.swift */,
+				013779372AAEE2A30055733F /* MainViewController.swift */,
+				01F944EF2AEB9E7100FE9AB1 /* SurveySexViewController.swift */,
+				01F944F12AEBA20A00FE9AB1 /* SurveySkinViewController.swift */,
+				013747D92AF7B69F002C3DE4 /* LearningViewController.swift */,
+				013747DB2AF8B629002C3DE4 /* ResultViewController.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		0137790C2AAEE11E0055733F = {
 			isa = PBXGroup;
 			children = (
@@ -72,16 +95,9 @@
 		013779172AAEE11E0055733F /* CapStone */ = {
 			isa = PBXGroup;
 			children = (
-				013779182AAEE11E0055733F /* AppDelegate.swift */,
-				0137791A2AAEE11E0055733F /* SceneDelegate.swift */,
-				0137791C2AAEE11E0055733F /* ViewController.swift */,
-				013779372AAEE2A30055733F /* MainViewController.swift */,
-				01F944EF2AEB9E7100FE9AB1 /* SurveySexViewController.swift */,
-				01F944F12AEBA20A00FE9AB1 /* SurveySkinViewController.swift */,
-				013747D92AF7B69F002C3DE4 /* LearningViewController.swift */,
-				013747DB2AF8B629002C3DE4 /* ResultViewController.swift */,
+				013747DE2AFB7875002C3DE4 /* Sources */,
+				013747DD2AFB780B002C3DE4 /* Resources */,
 				013779392AAEE4E00055733F /* Extension */,
-				013779212AAEE11F0055733F /* Assets.xcassets */,
 				013779232AAEE11F0055733F /* LaunchScreen.storyboard */,
 				013779262AAEE11F0055733F /* Info.plist */,
 			);
@@ -178,7 +194,7 @@
 				013779382AAEE2A30055733F /* MainViewController.swift in Sources */,
 				013747DA2AF7B69F002C3DE4 /* LearningViewController.swift in Sources */,
 				0137793E2AAEE7B40055733F /* InsetTextField.swift in Sources */,
-				0137791D2AAEE11E0055733F /* ViewController.swift in Sources */,
+				0137791D2AAEE11E0055733F /* LoginViewController.swift in Sources */,
 				013779402AAEE7E40055733F /* UIColor+Extension.swift in Sources */,
 				01F944F02AEB9E7100FE9AB1 /* SurveySexViewController.swift in Sources */,
 				013779192AAEE11E0055733F /* AppDelegate.swift in Sources */,

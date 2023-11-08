@@ -9,7 +9,7 @@ import UIKit
 import Foundation
 import SnapKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
 
     private let welcomeLabel: UILabel = {
         let label = UILabel()
@@ -215,7 +215,6 @@ class ViewController: UIViewController {
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
-    
 }
 
 

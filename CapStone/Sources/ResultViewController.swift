@@ -52,7 +52,7 @@ class ResultViewController: UIViewController {
         
         
         
-        firstDoubtView.imageView.image = UIImage(named: "acne")
+        firstDoubtView.imageView.image = UIImage(named: "acne_1")
         firstDoubtView.nameLabel.text = "여드름"
         firstDoubtView.descriptionLabel.text = "남녀의 얼굴·가슴 등에 도톨도톨하게 나는 작은 종기"
         
@@ -100,13 +100,21 @@ class ResultViewController: UIViewController {
             make.top.equalTo(self.hospitalView_1.snp.bottom).offset(12)
             make.height.equalTo(80)
         }
+        firstDoubtView.moreButton.addTarget(self, action: #selector(goDetailView), for: .touchUpInside)
     }
     
     @objc func goToHome() {
         // 홈 버튼을 눌렀을 때 실행할 코드를 작성
         // 예를 들어, 다른 뷰 컨트롤러로 이동하는 코드를 여기에 추가
         let homeViewController = MainViewController()
-        self.navigationController?.pushViewController(homeViewController, animated: true)
+        self.navigationController?.pushViewController(homeViewController, animated: false)
+    }
+    
+    @objc func goDetailView() {
+        // 홈 버튼을 눌렀을 때 실행할 코드를 작성
+        // 예를 들어, 다른 뷰 컨트롤러로 이동하는 코드를 여기에 추가
+        let detailView = DetailDiseaseViewController()
+        self.navigationController?.pushViewController(detailView, animated: true)
     }
 }
 
@@ -116,7 +124,6 @@ class CustomView: UIView{
     let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.image = UIImage(named: "acne")
         imageView.contentMode = .scaleToFill
         return imageView
     }()

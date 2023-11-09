@@ -168,6 +168,6 @@ class SurveySkinViewController: UIViewController,UIImagePickerControllerDelegate
         // 홈 버튼을 눌렀을 때 실행할 코드를 작성
         // 예를 들어, 다른 뷰 컨트롤러로 이동하는 코드를 여기에 추가
          let homeViewController = MainViewController()
-         self.navigationController?.pushViewController(homeViewController, animated: true)
+         self.navigationController?.pushViewController(homeViewController, animated: false)
     }
 }

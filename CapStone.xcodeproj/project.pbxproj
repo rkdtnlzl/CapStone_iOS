@@ -20,6 +20,7 @@
 		0137793E2AAEE7B40055733F /* InsetTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0137793D2AAEE7B40055733F /* InsetTextField.swift */; };
 		013779402AAEE7E40055733F /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0137793F2AAEE7E40055733F /* UIColor+Extension.swift */; };
 		013779422AAEE7FA0055733F /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013779412AAEE7FA0055733F /* UITextField+Extension.swift */; };
+		017FDEAF2B072FCE0039E4AC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017FDEAE2B072FCE0039E4AC /* MapViewController.swift */; };
 		01F944F02AEB9E7100FE9AB1 /* SurveySexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F944EF2AEB9E7100FE9AB1 /* SurveySexViewController.swift */; };
 		01F944F22AEBA20A00FE9AB1 /* SurveySkinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F944F12AEBA20A00FE9AB1 /* SurveySkinViewController.swift */; };
 /* End PBXBuildFile section */
@@ -39,6 +40,7 @@
 		0137793D2AAEE7B40055733F /* InsetTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetTextField.swift; sourceTree = "<group>"; };
 		0137793F2AAEE7E40055733F /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		013779412AAEE7FA0055733F /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		017FDEAE2B072FCE0039E4AC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		01F944EF2AEB9E7100FE9AB1 /* SurveySexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveySexViewController.swift; sourceTree = "<group>"; };
 		01F944F12AEBA20A00FE9AB1 /* SurveySkinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveySkinViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,6 +78,7 @@
 				013747D92AF7B69F002C3DE4 /* LearningViewController.swift */,
 				013747DB2AF8B629002C3DE4 /* ResultViewController.swift */,
 				013747DF2AFCA40D002C3DE4 /* DetailDiseaseViewController.swift */,
+				017FDEAE2B072FCE0039E4AC /* MapViewController.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				0137793E2AAEE7B40055733F /* InsetTextField.swift in Sources */,
 				0137791D2AAEE11E0055733F /* LoginViewController.swift in Sources */,
 				013779402AAEE7E40055733F /* UIColor+Extension.swift in Sources */,
+				017FDEAF2B072FCE0039E4AC /* MapViewController.swift in Sources */,
 				01F944F02AEB9E7100FE9AB1 /* SurveySexViewController.swift in Sources */,
 				013779192AAEE11E0055733F /* AppDelegate.swift in Sources */,
 				013747E02AFCA40D002C3DE4 /* DetailDiseaseViewController.swift in Sources */,

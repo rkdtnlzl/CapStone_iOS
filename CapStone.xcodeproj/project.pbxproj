@@ -23,6 +23,7 @@
 		017FDEAF2B072FCE0039E4AC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017FDEAE2B072FCE0039E4AC /* MapViewController.swift */; };
 		01F944F02AEB9E7100FE9AB1 /* SurveySexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F944EF2AEB9E7100FE9AB1 /* SurveySexViewController.swift */; };
 		01F944F22AEBA20A00FE9AB1 /* SurveySkinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F944F12AEBA20A00FE9AB1 /* SurveySkinViewController.swift */; };
+		189382301BB90DE1D01E8D37 /* Pods_CapStone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1A9D3384B4FE16175DC169B /* Pods_CapStone.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,9 @@
 		017FDEAE2B072FCE0039E4AC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		01F944EF2AEB9E7100FE9AB1 /* SurveySexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveySexViewController.swift; sourceTree = "<group>"; };
 		01F944F12AEBA20A00FE9AB1 /* SurveySkinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveySkinViewController.swift; sourceTree = "<group>"; };
+		77ED158C86C5E64D770283F0 /* Pods-CapStone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CapStone.release.xcconfig"; path = "Target Support Files/Pods-CapStone/Pods-CapStone.release.xcconfig"; sourceTree = "<group>"; };
+		C20FCEDC059FB9547C1A7495 /* Pods-CapStone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CapStone.debug.xcconfig"; path = "Target Support Files/Pods-CapStone/Pods-CapStone.debug.xcconfig"; sourceTree = "<group>"; };
+		D1A9D3384B4FE16175DC169B /* Pods_CapStone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CapStone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0137792E2AAEE2290055733F /* SnapKit in Frameworks */,
+				189382301BB90DE1D01E8D37 /* Pods_CapStone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +93,8 @@
 			children = (
 				013779172AAEE11E0055733F /* CapStone */,
 				013779162AAEE11E0055733F /* Products */,
+				8778F155A7015BD4C0EDAA71 /* Pods */,
+				4C59EFC6506FDDA03B559B2F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,6 +127,24 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		4C59EFC6506FDDA03B559B2F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1A9D3384B4FE16175DC169B /* Pods_CapStone.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8778F155A7015BD4C0EDAA71 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C20FCEDC059FB9547C1A7495 /* Pods-CapStone.debug.xcconfig */,
+				77ED158C86C5E64D770283F0 /* Pods-CapStone.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -127,9 +152,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 013779292AAEE11F0055733F /* Build configuration list for PBXNativeTarget "CapStone" */;
 			buildPhases = (
+				8BFC55140A5813C587777561 /* [CP] Check Pods Manifest.lock */,
 				013779112AAEE11E0055733F /* Sources */,
 				013779122AAEE11E0055733F /* Frameworks */,
 				013779132AAEE11E0055733F /* Resources */,
+				11F247817A046A71DA4DA130 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -190,6 +217,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11F247817A046A71DA4DA130 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CapStone/Pods-CapStone-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CapStone/Pods-CapStone-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CapStone/Pods-CapStone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8BFC55140A5813C587777561 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CapStone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		013779112AAEE11E0055733F /* Sources */ = {
@@ -342,6 +411,7 @@
 		};
 		0137792A2AAEE11F0055733F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C20FCEDC059FB9547C1A7495 /* Pods-CapStone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -371,6 +441,7 @@
 		};
 		0137792B2AAEE11F0055733F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77ED158C86C5E64D770283F0 /* Pods-CapStone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

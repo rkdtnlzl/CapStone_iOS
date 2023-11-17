@@ -101,6 +101,7 @@ class ResultViewController: UIViewController {
             make.height.equalTo(80)
         }
         firstDoubtView.moreButton.addTarget(self, action: #selector(goDetailView), for: .touchUpInside)
+        hospitalView_1.moreButton.addTarget(self, action: #selector(goMapView), for: .touchUpInside)
     }
     
     @objc func goToHome() {
@@ -115,6 +116,13 @@ class ResultViewController: UIViewController {
         // 예를 들어, 다른 뷰 컨트롤러로 이동하는 코드를 여기에 추가
         let detailView = DetailDiseaseViewController()
         self.navigationController?.pushViewController(detailView, animated: true)
+    }
+    
+    @objc func goMapView() {
+        // 홈 버튼을 눌렀을 때 실행할 코드를 작성
+        // 예를 들어, 다른 뷰 컨트롤러로 이동하는 코드를 여기에 추가
+        let mapView = MapViewController()
+        self.navigationController?.pushViewController(mapView, animated: true)
     }
 }
 

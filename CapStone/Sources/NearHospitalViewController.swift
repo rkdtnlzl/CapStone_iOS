@@ -49,10 +49,12 @@ class NearHospitalViewController: UIViewController, UICollectionViewDataSource, 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NearHospitalCollectionViewCell", for: indexPath) as! NearHospitalCollectionViewCell
 
         // 이미지 설정
-        cell.imageView.image = UIImage(named: "Avatar_test") // 이미지 파일 이름으로 변경
+        cell.imageView.image = UIImage(named: "hospital_test1") // 이미지 파일 이름으로 변경
+        cell.imageView.layer.cornerRadius = 20
 
         // 텍스트 설정
-        cell.textLabel.text = "파란 반바지"
+        cell.textLabel.text = "미즈 피부과"
+        cell.descriptionLabel.text = "서울 광진구 광나루로 355"
 
         return cell
     }

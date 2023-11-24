@@ -16,6 +16,7 @@ class NearHospitalCollectionViewCell: UICollectionViewCell {
     let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleToFill
+        imageView.layer.cornerRadius = 20
         return imageView
     }()
     
@@ -24,14 +25,22 @@ class NearHospitalCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.textAlignment = .center
         label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 14)
+        label.font = UIFont.systemFont(ofSize: 15, weight: .bold)
+        return label
+    }()
+    
+    let descriptionLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.textColor = .black
+        label.font = UIFont.systemFont(ofSize: 12)
         return label
     }()
     
     let purchaseButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("구매하기", for: .normal)
+        button.setTitle("위치보기", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .bold)
         button.setTitleColor(UIColor(r: 0, g: 111, b: 253), for: .normal)
         button.backgroundColor = .white
@@ -48,17 +57,24 @@ class NearHospitalCollectionViewCell: UICollectionViewCell {
         // 셀에 이미지 뷰와 텍스트 라벨 추가
         addSubview(imageView)
         addSubview(textLabel)
+        addSubview(descriptionLabel)
         addSubview(purchaseButton)
         
         // 이미지 뷰와 텍스트 라벨의 레이아웃 설정
         imageView.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(10)
+            make.top.equalToSuperview().inset(10)
             make.bottom.equalToSuperview().inset(10)
-            make.leading.equalToSuperview().offset(10)
+            make.leading.equalToSuperview().inset(10)
+            make.width.equalTo(100)
         }
         
         textLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(10)
+            make.leading.equalTo(self.imageView.snp.trailing).offset(15)
+        }
+        
+        descriptionLabel.snp.makeConstraints { make in
+            make.top.equalTo(self.textLabel.snp.bottom).offset(10)
             make.leading.equalTo(self.imageView.snp.trailing).offset(15)
         }
         

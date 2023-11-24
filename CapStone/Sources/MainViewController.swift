@@ -132,6 +132,7 @@ class MainViewController: UIViewController {
             make.top.equalTo(self.surveyButton.snp.bottom).offset(20)
             make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).inset(260)
         }
+        
         self.nearHospitalButton.snp.makeConstraints { make in
             make.leading.equalTo(self.view.safeAreaLayoutGuide.snp.leading).inset(24)
             make.trailing.equalTo(self.view.safeAreaLayoutGuide.snp.trailing).inset(200)
@@ -183,11 +184,17 @@ class MainViewController: UIViewController {
         
         // 버튼 클릭시 다음화면으로 이동
         self.surveyButton.addTarget(self, action: #selector(onPressNextButton), for: .touchUpInside)
+        self.nearHospitalButton.addTarget(self, action: #selector(onPressNearHospitalButton), for: .touchUpInside)
     }
     
     @objc func onPressNextButton(sender: UIButton) {
         let surveyView_1 = SurveySexViewController()
         self.navigationController?.pushViewController(surveyView_1, animated: true)
+    }
+    
+    @objc func onPressNearHospitalButton(sender: UIButton) {
+        let hospitalView_1 = NearHospitalViewController()
+        self.navigationController?.pushViewController(hospitalView_1, animated: true)
     }
 }
 

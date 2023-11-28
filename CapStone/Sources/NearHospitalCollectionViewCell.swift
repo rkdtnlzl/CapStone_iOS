@@ -37,7 +37,7 @@ class NearHospitalCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    let purchaseButton: UIButton = {
+    let placeButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("위치보기", for: .normal)
@@ -51,6 +51,8 @@ class NearHospitalCollectionViewCell: UICollectionViewCell {
         return button
     }()
     
+    weak var viewController: UIViewController?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -58,7 +60,7 @@ class NearHospitalCollectionViewCell: UICollectionViewCell {
         addSubview(imageView)
         addSubview(textLabel)
         addSubview(descriptionLabel)
-        addSubview(purchaseButton)
+        addSubview(placeButton)
         
         // 이미지 뷰와 텍스트 라벨의 레이아웃 설정
         imageView.snp.makeConstraints { make in
@@ -78,12 +80,22 @@ class NearHospitalCollectionViewCell: UICollectionViewCell {
             make.leading.equalTo(self.imageView.snp.trailing).offset(15)
         }
         
-        purchaseButton.snp.makeConstraints { make in
+        placeButton.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(60)
             make.trailing.equalToSuperview().inset(20)
             make.width.equalTo(90)
             make.height.equalTo(30)
         }
+        
+        placeButton.addTarget(self, action: #selector(placeButtonTapped), for: .touchUpInside)
+    }
+    @objc private func placeButtonTapped() {
+        guard let viewController = viewController else {
+            print("View controller is not set.")
+            return
+        }
+        let mapVC = MapViewController()
+        viewController.navigationController?.pushViewController(mapVC, animated: true)
     }
     
     required init?(coder aDecoder: NSCoder) {

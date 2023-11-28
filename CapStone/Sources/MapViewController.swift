@@ -16,7 +16,7 @@ class MapViewController: UIViewController {
         let naverMapView = NMFNaverMapView(frame: view.frame)
         view.addSubview(naverMapView)
         
-        self.navigationItem.title = "미즈 피부과"
+        self.navigationItem.title = "OOO 병원"
         
         self.navigationController?.navigationBar.topItem?.title = ""
 

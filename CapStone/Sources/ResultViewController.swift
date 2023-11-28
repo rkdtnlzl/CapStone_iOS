@@ -102,6 +102,7 @@ class ResultViewController: UIViewController {
         }
         firstDoubtView.moreButton.addTarget(self, action: #selector(goDetailView), for: .touchUpInside)
         hospitalView_1.moreButton.addTarget(self, action: #selector(goMapView), for: .touchUpInside)
+        hospitalView_2.moreButton.addTarget(self, action: #selector(goMapView), for: .touchUpInside)
     }
     
     @objc func goToHome() {

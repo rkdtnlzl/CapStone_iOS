@@ -55,6 +55,8 @@ class NearHospitalViewController: UIViewController, UICollectionViewDataSource, 
         // 텍스트 설정
         cell.textLabel.text = "미즈 피부과"
         cell.descriptionLabel.text = "서울 광진구 광나루로 355"
+        
+        cell.viewController = self
 
         return cell
     }
@@ -66,7 +68,6 @@ class NearHospitalViewController: UIViewController, UICollectionViewDataSource, 
         
         return CGSize(width: cellWidth, height: cellHeight)
     }
-    
     
 }
 

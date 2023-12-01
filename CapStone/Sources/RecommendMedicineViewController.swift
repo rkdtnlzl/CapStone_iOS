@@ -1,8 +1,8 @@
 //
-//  NearHospitalViewController.swift
+//  RecommendMedicineViewController.swift
 //  CapStone
 //
-//  Created by 강석호 on 2023/11/24.
+//  Created by 강석호 on 2023/12/01.
 //
 
 import Foundation
@@ -10,9 +10,9 @@ import UIKit
 import SnapKit
 
 
-class NearHospitalViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class RecommendMedicineViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    private let nearHospitalCollectionView: UICollectionView = {
+    private let recommendMedicineCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.sectionInset = UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
@@ -28,12 +28,12 @@ class NearHospitalViewController: UIViewController, UICollectionViewDataSource, 
         view.backgroundColor = .white
         
         // UICollectionView 설정
-        nearHospitalCollectionView.dataSource = self
-        nearHospitalCollectionView.delegate = self
-        nearHospitalCollectionView.register(NearHospitalCollectionViewCell.self, forCellWithReuseIdentifier: "NearHospitalCollectionViewCell") // 셀 등록
+        recommendMedicineCollectionView.dataSource = self
+        recommendMedicineCollectionView.delegate = self
+        recommendMedicineCollectionView.register(RecommendMedicineCollectionViewCell.self, forCellWithReuseIdentifier: "RecommendMedicineCollectionViewCell") // 셀 등록
         
-        view.addSubview(nearHospitalCollectionView)
-        nearHospitalCollectionView.frame = view.bounds
+        view.addSubview(recommendMedicineCollectionView)
+        recommendMedicineCollectionView.frame = view.bounds
     }
     
     // MARK: UICollectionViewDataSource
@@ -45,15 +45,15 @@ class NearHospitalViewController: UIViewController, UICollectionViewDataSource, 
     
     // 셀 생성 및 구성
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NearHospitalCollectionViewCell", for: indexPath) as! NearHospitalCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecommendMedicineCollectionViewCell", for: indexPath) as! RecommendMedicineCollectionViewCell
 
         // 이미지 설정
         cell.imageView.image = UIImage(named: "hospital_test1") // 이미지 파일 이름으로 변경
         cell.imageView.layer.cornerRadius = 20
 
         // 텍스트 설정
-        cell.textLabel.text = "미즈 피부과"
-        cell.descriptionLabel.text = "서울 광진구 광나루로 355"
+        cell.textLabel.text = "노스카나 젤"
+        cell.descriptionLabel.text = "4년 연속 판매 1위 여드름 흉터 치료제"
         
         cell.viewController = self
 

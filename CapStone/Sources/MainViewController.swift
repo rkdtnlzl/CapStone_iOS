@@ -185,6 +185,7 @@ class MainViewController: UIViewController {
         // 버튼 클릭시 다음화면으로 이동
         self.surveyButton.addTarget(self, action: #selector(onPressNextButton), for: .touchUpInside)
         self.nearHospitalButton.addTarget(self, action: #selector(onPressNearHospitalButton), for: .touchUpInside)
+        self.recommendButton.addTarget(self, action: #selector(onPressRecommendButton), for: .touchUpInside)
     }
     
     @objc func onPressNextButton(sender: UIButton) {
@@ -195,6 +196,11 @@ class MainViewController: UIViewController {
     @objc func onPressNearHospitalButton(sender: UIButton) {
         let hospitalView_1 = NearHospitalViewController()
         self.navigationController?.pushViewController(hospitalView_1, animated: true)
+    }
+    
+    @objc func onPressRecommendButton(sender: UIButton) {
+        let medicineView_1 = RecommendMedicineViewController()
+        self.navigationController?.pushViewController(medicineView_1, animated: true)
     }
 }
 

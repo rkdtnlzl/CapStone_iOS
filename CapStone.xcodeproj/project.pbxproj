@@ -25,6 +25,7 @@
 		017FDEB72B10718C0039E4AC /* NearHospitalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017FDEB62B10718C0039E4AC /* NearHospitalCollectionViewCell.swift */; };
 		017FDEB92B19A5020039E4AC /* RecommendMedicineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017FDEB82B19A5020039E4AC /* RecommendMedicineViewController.swift */; };
 		017FDEBB2B19A56B0039E4AC /* RecommendMedicineCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017FDEBA2B19A56B0039E4AC /* RecommendMedicineCollectionViewCell.swift */; };
+		017FDEBD2B19AFB00039E4AC /* DetailMedicineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017FDEBC2B19AFB00039E4AC /* DetailMedicineViewController.swift */; };
 		01F944F02AEB9E7100FE9AB1 /* SurveySexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F944EF2AEB9E7100FE9AB1 /* SurveySexViewController.swift */; };
 		01F944F22AEBA20A00FE9AB1 /* SurveySkinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F944F12AEBA20A00FE9AB1 /* SurveySkinViewController.swift */; };
 		189382301BB90DE1D01E8D37 /* Pods_CapStone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1A9D3384B4FE16175DC169B /* Pods_CapStone.framework */; };
@@ -50,6 +51,7 @@
 		017FDEB62B10718C0039E4AC /* NearHospitalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearHospitalCollectionViewCell.swift; sourceTree = "<group>"; };
 		017FDEB82B19A5020039E4AC /* RecommendMedicineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendMedicineViewController.swift; sourceTree = "<group>"; };
 		017FDEBA2B19A56B0039E4AC /* RecommendMedicineCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendMedicineCollectionViewCell.swift; sourceTree = "<group>"; };
+		017FDEBC2B19AFB00039E4AC /* DetailMedicineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMedicineViewController.swift; sourceTree = "<group>"; };
 		01F944EF2AEB9E7100FE9AB1 /* SurveySexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveySexViewController.swift; sourceTree = "<group>"; };
 		01F944F12AEBA20A00FE9AB1 /* SurveySkinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveySkinViewController.swift; sourceTree = "<group>"; };
 		77ED158C86C5E64D770283F0 /* Pods-CapStone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CapStone.release.xcconfig"; path = "Target Support Files/Pods-CapStone/Pods-CapStone.release.xcconfig"; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				017FDEB62B10718C0039E4AC /* NearHospitalCollectionViewCell.swift */,
 				017FDEB82B19A5020039E4AC /* RecommendMedicineViewController.swift */,
 				017FDEBA2B19A56B0039E4AC /* RecommendMedicineCollectionViewCell.swift */,
+				017FDEBC2B19AFB00039E4AC /* DetailMedicineViewController.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				013779422AAEE7FA0055733F /* UITextField+Extension.swift in Sources */,
+				017FDEBD2B19AFB00039E4AC /* DetailMedicineViewController.swift in Sources */,
 				013779382AAEE2A30055733F /* MainViewController.swift in Sources */,
 				013747DA2AF7B69F002C3DE4 /* LearningViewController.swift in Sources */,
 				0137793E2AAEE7B40055733F /* InsetTextField.swift in Sources */,

@@ -48,7 +48,7 @@ class RecommendMedicineViewController: UIViewController, UICollectionViewDataSou
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecommendMedicineCollectionViewCell", for: indexPath) as! RecommendMedicineCollectionViewCell
 
         // 이미지 설정
-        cell.imageView.image = UIImage(named: "hospital_test1") // 이미지 파일 이름으로 변경
+        cell.imageView.image = UIImage(named: "medicine_test1") // 이미지 파일 이름으로 변경
         cell.imageView.layer.cornerRadius = 20
 
         // 텍스트 설정

@@ -94,7 +94,7 @@ class RecommendMedicineCollectionViewCell: UICollectionViewCell {
             print("View controller is not set.")
             return
         }
-        let detailVC = DetailDiseaseViewController()
+        let detailVC = DetailMedicineViewController()
         viewController.navigationController?.pushViewController(detailVC, animated: true)
     }
     

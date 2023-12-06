@@ -24,7 +24,7 @@ class LearningViewController: UIViewController {
         label.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
         label.textColor = .black
         label.textAlignment = .left
-        label.text = "추천 중"
+        label.text = "학습 중"
         label.numberOfLines = 1
         return label
     }()
@@ -35,7 +35,7 @@ class LearningViewController: UIViewController {
         label.font = UIFont.systemFont(ofSize: 13, weight: .regular)
         label.textColor = UIColor(r: 113, g: 114, b: 122)
         label.textAlignment = .left
-        label.text = "30초~1분정도 소요됩니다."
+        label.text = "약 10초정도 소요됩니다."
         label.numberOfLines = 1
         return label
     }()
@@ -99,7 +99,7 @@ class LearningViewController: UIViewController {
             completionLabel.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
             completionLabel.textColor = .black
             completionLabel.textAlignment = .center
-            completionLabel.text = "추천완료"
+            completionLabel.text = "학습완료"
             completionLabel.numberOfLines = 1
             self?.view.addSubview(completionLabel)
             

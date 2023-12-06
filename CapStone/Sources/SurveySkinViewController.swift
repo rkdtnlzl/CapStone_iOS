@@ -11,6 +11,7 @@ import AVFoundation
 class SurveySkinViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var sex : String = ""
+    private var selectedImage: UIImage?
     
     private let progressBar: UIProgressView = {
         let progressView = UIProgressView(progressViewStyle: .default)
@@ -134,14 +135,32 @@ class SurveySkinViewController: UIViewController,UIImagePickerControllerDelegate
     // UIImagePickerControllerDelegate에서 필요한 메서드를 구현합니다.
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let selectedImage = info[.originalImage] as? UIImage {
-            // 선택한 이미지를 처리하는 코드를 여기에 추가합니다.
-            // 예를 들어, 이미지를 저장하거나 표시할 수 있습니다.
+            // 이미지를 저장
+            self.selectedImage = selectedImage
             progressBar.setProgress(0.66, animated: true)
+            
+            // 선택한 이미지를 표시할 UIImageView를 생성하고 설정
+            let imageView = UIImageView()
+            imageView.translatesAutoresizingMaskIntoConstraints = false
+            imageView.contentMode = .scaleAspectFit
+            imageView.image = selectedImage
+            
+            // 이미지 뷰를 화면에 추가
+            view.addSubview(imageView)
+            
+            // 이미지 뷰의 제약 조건 설정
+            imageView.snp.makeConstraints { make in
+                make.top.equalTo(cameraButton.snp.bottom).offset(50)
+                make.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).inset(54)
+                make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).inset(54)
+                make.bottom.equalTo(nextButton.snp.top).offset(-50)
+            }
         }
         
         // 카메라 뷰를 닫습니다.
         picker.dismiss(animated: true, completion: nil)
     }
+
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         // 카메라 뷰를 취소하고 닫습니다.

@@ -10,9 +10,9 @@ import Foundation
 
 struct APIConstants {
     // MARK: -  Base URL
-    static let baseURL = "https://cazait.shop"
+    static let baseURL = "http://13.209.66.222:5000"
     
     // MARK: - Feature URL
-    static let loginURL = baseURL + "/api/cafes/all" // 카페 전체 조회
+    static let learningURL = baseURL + "/predict/1" // 이미지 학습 Post URL
     
 }

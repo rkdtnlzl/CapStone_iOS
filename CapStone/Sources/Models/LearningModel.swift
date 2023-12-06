@@ -7,17 +7,11 @@
 
 import Foundation
 
-struct LoginResponse: Codable {
-    let code: Int
-    let result: String
-    let message: String
-    let data: [DetailCafeMenu]
-}
 
-struct DetailCafeMenu: Codable {
-    let menuId: Int
-    let name: String
-    let description: String
-    let price: Int
-    let imageUrl: String
+struct LearningResponse: Codable {
+    let lable: String
+    let confidence: Double
+    let disease_image: String
+    let disease_id: Int
+    let simple_description: String
 }

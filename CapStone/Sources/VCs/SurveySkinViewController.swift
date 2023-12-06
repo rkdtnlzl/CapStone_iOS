@@ -179,6 +179,9 @@ class SurveySkinViewController: UIViewController,UIImagePickerControllerDelegate
     }
     
     @objc func onPressNextButton(sender: UIButton) {
+        
+        uploadImageToServer()
+        
         let learningView = LearningViewController()
         self.navigationController?.pushViewController(learningView, animated: true)
     }
@@ -188,5 +191,31 @@ class SurveySkinViewController: UIViewController,UIImagePickerControllerDelegate
         // 예를 들어, 다른 뷰 컨트롤러로 이동하는 코드를 여기에 추가
          let homeViewController = MainViewController()
          self.navigationController?.pushViewController(homeViewController, animated: false)
+    }
+    
+    func uploadImageToServer() {
+        guard let selectedImage = selectedImage else {
+            // 이미지가 선택되지 않은 경우
+            return
+        }
+
+        LearningService.shared.uploadImage(image: selectedImage) { result in
+            switch result {
+            case .success(let data):
+                // 성공적으로 이미지를 업로드한 경우
+                print("Image uploaded successfully: \(data)")
+            case .pathErr:
+                // 경로 오류 발생
+                print("Path error during image upload")
+            case .serverErr:
+                // 서버 오류 발생
+                print("Server error during image upload")
+            case .networkFail:
+                // 네트워크 오류 발생
+                print("Network error during image upload")
+            case .requestErr(_):
+                print("requestErr")
+            }
+        }
     }
 }

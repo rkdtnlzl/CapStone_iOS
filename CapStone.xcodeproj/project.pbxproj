@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0130E0752B203FF80072AC62 /* LearningModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0130E0742B203FF80072AC62 /* LearningModel.swift */; };
 		013747DA2AF7B69F002C3DE4 /* LearningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013747D92AF7B69F002C3DE4 /* LearningViewController.swift */; };
 		013747DC2AF8B629002C3DE4 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013747DB2AF8B629002C3DE4 /* ResultViewController.swift */; };
 		013747E02AFCA40D002C3DE4 /* DetailDiseaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013747DF2AFCA40D002C3DE4 /* DetailDiseaseViewController.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0130E0742B203FF80072AC62 /* LearningModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningModel.swift; sourceTree = "<group>"; };
 		013747D92AF7B69F002C3DE4 /* LearningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningViewController.swift; sourceTree = "<group>"; };
 		013747DB2AF8B629002C3DE4 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		013747DF2AFCA40D002C3DE4 /* DetailDiseaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDiseaseViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0130E0712B203FB70072AC62 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0130E0742B203FF80072AC62 /* LearningModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0130E0722B203FC40072AC62 /* VCs */ = {
+			isa = PBXGroup;
+			children = (
+				0137791C2AAEE11E0055733F /* LoginViewController.swift */,
+				013779372AAEE2A30055733F /* MainViewController.swift */,
+				01F944EF2AEB9E7100FE9AB1 /* SurveySexViewController.swift */,
+				01F944F12AEBA20A00FE9AB1 /* SurveySkinViewController.swift */,
+				013747D92AF7B69F002C3DE4 /* LearningViewController.swift */,
+				013747DB2AF8B629002C3DE4 /* ResultViewController.swift */,
+				013747DF2AFCA40D002C3DE4 /* DetailDiseaseViewController.swift */,
+				017FDEAE2B072FCE0039E4AC /* MapViewController.swift */,
+				017FDEB42B1071040039E4AC /* NearHospitalViewController.swift */,
+				017FDEB82B19A5020039E4AC /* RecommendMedicineViewController.swift */,
+				017FDEBC2B19AFB00039E4AC /* DetailMedicineViewController.swift */,
+			);
+			path = VCs;
+			sourceTree = "<group>";
+		};
+		0130E0732B203FD60072AC62 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				017FDEB62B10718C0039E4AC /* NearHospitalCollectionViewCell.swift */,
+				017FDEBA2B19A56B0039E4AC /* RecommendMedicineCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		013747DD2AFB780B002C3DE4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,19 +123,9 @@
 		013747DE2AFB7875002C3DE4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				0137791C2AAEE11E0055733F /* LoginViewController.swift */,
-				013779372AAEE2A30055733F /* MainViewController.swift */,
-				01F944EF2AEB9E7100FE9AB1 /* SurveySexViewController.swift */,
-				01F944F12AEBA20A00FE9AB1 /* SurveySkinViewController.swift */,
-				013747D92AF7B69F002C3DE4 /* LearningViewController.swift */,
-				013747DB2AF8B629002C3DE4 /* ResultViewController.swift */,
-				013747DF2AFCA40D002C3DE4 /* DetailDiseaseViewController.swift */,
-				017FDEAE2B072FCE0039E4AC /* MapViewController.swift */,
-				017FDEB42B1071040039E4AC /* NearHospitalViewController.swift */,
-				017FDEB62B10718C0039E4AC /* NearHospitalCollectionViewCell.swift */,
-				017FDEB82B19A5020039E4AC /* RecommendMedicineViewController.swift */,
-				017FDEBA2B19A56B0039E4AC /* RecommendMedicineCollectionViewCell.swift */,
-				017FDEBC2B19AFB00039E4AC /* DetailMedicineViewController.swift */,
+				0130E0732B203FD60072AC62 /* Cells */,
+				0130E0722B203FC40072AC62 /* VCs */,
+				0130E0712B203FB70072AC62 /* Models */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -289,6 +316,7 @@
 				017FDEB52B1071040039E4AC /* NearHospitalViewController.swift in Sources */,
 				017FDEB92B19A5020039E4AC /* RecommendMedicineViewController.swift in Sources */,
 				017FDEB72B10718C0039E4AC /* NearHospitalCollectionViewCell.swift in Sources */,
+				0130E0752B203FF80072AC62 /* LearningModel.swift in Sources */,
 				017FDEAF2B072FCE0039E4AC /* MapViewController.swift in Sources */,
 				01F944F02AEB9E7100FE9AB1 /* SurveySexViewController.swift in Sources */,
 				013779192AAEE11E0055733F /* AppDelegate.swift in Sources */,

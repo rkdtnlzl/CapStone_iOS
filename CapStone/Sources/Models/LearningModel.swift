@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DetailCafeMenuResponse: Codable {
+struct LoginResponse: Codable {
     let code: Int
     let result: String
     let message: String

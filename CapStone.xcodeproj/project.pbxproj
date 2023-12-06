@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0130E0752B203FF80072AC62 /* LearningModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0130E0742B203FF80072AC62 /* LearningModel.swift */; };
+		0130E0782B2041A50072AC62 /* APIContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0130E0772B2041A50072AC62 /* APIContents.swift */; };
+		0130E07A2B2041CB0072AC62 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0130E0792B2041CB0072AC62 /* NetworkResult.swift */; };
+		0130E07D2B2042020072AC62 /* LearningService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0130E07C2B2042020072AC62 /* LearningService.swift */; };
+		0130E0802B2042300072AC62 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0130E07F2B2042300072AC62 /* Alamofire */; };
 		013747DA2AF7B69F002C3DE4 /* LearningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013747D92AF7B69F002C3DE4 /* LearningViewController.swift */; };
 		013747DC2AF8B629002C3DE4 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013747DB2AF8B629002C3DE4 /* ResultViewController.swift */; };
 		013747E02AFCA40D002C3DE4 /* DetailDiseaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013747DF2AFCA40D002C3DE4 /* DetailDiseaseViewController.swift */; };
@@ -34,6 +38,9 @@
 
 /* Begin PBXFileReference section */
 		0130E0742B203FF80072AC62 /* LearningModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningModel.swift; sourceTree = "<group>"; };
+		0130E0772B2041A50072AC62 /* APIContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIContents.swift; sourceTree = "<group>"; };
+		0130E0792B2041CB0072AC62 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		0130E07C2B2042020072AC62 /* LearningService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningService.swift; sourceTree = "<group>"; };
 		013747D92AF7B69F002C3DE4 /* LearningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningViewController.swift; sourceTree = "<group>"; };
 		013747DB2AF8B629002C3DE4 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		013747DF2AFCA40D002C3DE4 /* DetailDiseaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDiseaseViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0130E0802B2042300072AC62 /* Alamofire in Frameworks */,
 				0137792E2AAEE2290055733F /* SnapKit in Frameworks */,
 				189382301BB90DE1D01E8D37 /* Pods_CapStone.framework in Frameworks */,
 			);
@@ -109,9 +117,28 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		0130E0762B20417D0072AC62 /* APIServices */ = {
+			isa = PBXGroup;
+			children = (
+				0130E07B2B2041E50072AC62 /* Learning_Service */,
+				0130E0772B2041A50072AC62 /* APIContents.swift */,
+				0130E0792B2041CB0072AC62 /* NetworkResult.swift */,
+			);
+			path = APIServices;
+			sourceTree = "<group>";
+		};
+		0130E07B2B2041E50072AC62 /* Learning_Service */ = {
+			isa = PBXGroup;
+			children = (
+				0130E07C2B2042020072AC62 /* LearningService.swift */,
+			);
+			path = Learning_Service;
+			sourceTree = "<group>";
+		};
 		013747DD2AFB780B002C3DE4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0130E0762B20417D0072AC62 /* APIServices */,
 				013779392AAEE4E00055733F /* Extension */,
 				013779212AAEE11F0055733F /* Assets.xcassets */,
 				013779182AAEE11E0055733F /* AppDelegate.swift */,
@@ -206,6 +233,7 @@
 			name = CapStone;
 			packageProductDependencies = (
 				0137792D2AAEE2290055733F /* SnapKit */,
+				0130E07F2B2042300072AC62 /* Alamofire */,
 			);
 			productName = CapStone;
 			productReference = 013779152AAEE11E0055733F /* CapStone.app */;
@@ -237,6 +265,7 @@
 			mainGroup = 0137790C2AAEE11E0055733F;
 			packageReferences = (
 				0137792C2AAEE2290055733F /* XCRemoteSwiftPackageReference "SnapKit" */,
+				0130E07E2B2042300072AC62 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 013779162AAEE11E0055733F /* Products */;
 			projectDirPath = "";
@@ -312,15 +341,18 @@
 				013747DA2AF7B69F002C3DE4 /* LearningViewController.swift in Sources */,
 				0137793E2AAEE7B40055733F /* InsetTextField.swift in Sources */,
 				0137791D2AAEE11E0055733F /* LoginViewController.swift in Sources */,
+				0130E07A2B2041CB0072AC62 /* NetworkResult.swift in Sources */,
 				013779402AAEE7E40055733F /* UIColor+Extension.swift in Sources */,
 				017FDEB52B1071040039E4AC /* NearHospitalViewController.swift in Sources */,
 				017FDEB92B19A5020039E4AC /* RecommendMedicineViewController.swift in Sources */,
 				017FDEB72B10718C0039E4AC /* NearHospitalCollectionViewCell.swift in Sources */,
 				0130E0752B203FF80072AC62 /* LearningModel.swift in Sources */,
 				017FDEAF2B072FCE0039E4AC /* MapViewController.swift in Sources */,
+				0130E0782B2041A50072AC62 /* APIContents.swift in Sources */,
 				01F944F02AEB9E7100FE9AB1 /* SurveySexViewController.swift in Sources */,
 				013779192AAEE11E0055733F /* AppDelegate.swift in Sources */,
 				013747E02AFCA40D002C3DE4 /* DetailDiseaseViewController.swift in Sources */,
+				0130E07D2B2042020072AC62 /* LearningService.swift in Sources */,
 				017FDEBB2B19A56B0039E4AC /* RecommendMedicineCollectionViewCell.swift in Sources */,
 				01F944F22AEBA20A00FE9AB1 /* SurveySkinViewController.swift in Sources */,
 				0137791B2AAEE11E0055733F /* SceneDelegate.swift in Sources */,
@@ -540,6 +572,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		0130E07E2B2042300072AC62 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.1;
+			};
+		};
 		0137792C2AAEE2290055733F /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -551,6 +591,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0130E07F2B2042300072AC62 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0130E07E2B2042300072AC62 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		0137792D2AAEE2290055733F /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0137792C2AAEE2290055733F /* XCRemoteSwiftPackageReference "SnapKit" */;
